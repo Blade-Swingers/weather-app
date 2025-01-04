@@ -1,13 +1,13 @@
 import React from "react";
-import Weather from "./assets/weather"; // Adjust the path as needed
-import Quotes from "./assets/quote";   // Adjust the path as needed
+import Weather from "./components/Weather"; // Weather component
+import Quote from "./components/Quote";   // Quote component
 
 const App = () => {
     return (
         <div>
-            <h1>Weather App</h1>
+            <h1>Weather</h1>
             <Weather />
-            <Quotes />
+            <Quote />
         </div>
     );
 };

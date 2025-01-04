@@ -5,10 +5,10 @@ const Weather = () => {
     const [weather, setWeather] = useState(null);
 
     useEffect(() => {
-        // Fetch data from the backend
-        axios.get("http://localhost:3000/api/weather") // Replace with your backend URL
+        // Fetch weather data from the backend
+        axios.get("http://localhost:3000/api/weather")
             .then((response) => {
-                setWeather(response.data.weather); // Update weather data
+                setWeather(response.data); // Update weather data
             })
             .catch((error) => {
                 console.error("Error fetching weather data:", error);
