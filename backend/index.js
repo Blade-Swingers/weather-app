@@ -11,7 +11,14 @@ app.use(cors());
 
 // Routes
 app.get('/', (req, res) => {
-    res.json({ message: 'Welcome to the Weather App API' });
+    // res.json({ message: 'Welcome to the Weather App API' });
+    const sampleWeatherData = {
+        location: 'New York',
+        temperature: '22°C',
+        condition: 'Sunny'
+    };
+    res.json(sampleWeatherData);
+
 });
 
 // Example endpoint to get weather data
