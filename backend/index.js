@@ -1,17 +1,17 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-// import cors from 'cors';
+import cors from 'cors';
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(bodyParser.json());
-// app.use(cors());
+app.use(cors());
 
 // Routes
 app.get('/', (req, res) => {
-    res.send('Welcome to the Weather App API');
+    res.json({ message: 'Welcome to the Weather App API' });
 });
 
 // Example endpoint to get weather data
