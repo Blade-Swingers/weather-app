@@ -23,7 +23,7 @@ app.get('/api/weather', (req, res) => {
 });
 
 // Example endpoint to get weather data
-app.get('/api/quotes', (req, res) => {
+app.get('/api/quote', (req, res) => {
     // Replace with actual weather data fetching logic
     const Quote = quote.getRandomQuote();
     console.log(Quote);
