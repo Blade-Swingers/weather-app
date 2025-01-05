@@ -20,9 +20,10 @@ const Weather = () => {
             <h2>Weather Information</h2>
             {weather ? (
                 <div>
-                    <p>Location: {weather.location}</p>
                     <p>Temperature: {weather.temperature}</p>
-                    <p>Condition: {weather.condition}</p>
+                    <p>Condition: {weather.main}</p>
+                    <img src={`http://openweathermap.org/img/wn/${weather.icon}.png`} alt="Weather icon" />
+                    <p>Description: {weather.description}</p>
                 </div>
             ) : (
                 <p>Loading weather data...</p>
