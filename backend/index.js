@@ -54,7 +54,7 @@ app.get('/api/weather', async (req, res) => {
     
         const json = await response.json();
         const weatherData = {
-            temperature: json.main.temp,
+            temperature: Math.round((json.main.temp - 273.15) * 9/5 + 32),
             description: json.weather[0].description,
             main: json.weather[0].main,
             icon: json.weather[0].icon,
