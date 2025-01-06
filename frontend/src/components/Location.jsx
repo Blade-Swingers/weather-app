@@ -31,7 +31,6 @@ const Location = () => {
 
     return (
         <div>
-            <h2>Location Information</h2>
             <p>City: {location.city || "Fetching city..."}</p>
             <p>Country: {location.country || "Fetching country..."}</p>
         </div>
